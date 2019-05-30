@@ -1,0 +1,112 @@
+<header>
+  <img src={{user.photo}} alt="User photo">
+  <h2>@{{user.userName | uppercase}} Details </h2>
+</header>
+
+<section class="wrapper">
+  <!-- General user information -->
+  <aside class="userTableWrapper">
+    <table class="userTable">
+      <thead>
+        <tr>
+          <th> <button (click)="goBack()"><<Go back</button> </th> 
+                <th colspan="2"> General User Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ID</td>
+          <td>{{user.id}}</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>{{user.phone}}</td>
+        </tr>
+        <tr>
+          <td>User Name</td>
+          <td>{{user.userName}}</td>
+        </tr>
+        <tr>
+          <td>First Name</td>
+          <td>{{user.firstName}}</td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td>{{user.lastName}}</td>
+        </tr>
+        <tr>
+          <td>Birthday</td>
+          <td>{{user.dateOfBirth}}</td>
+        </tr>
+        <tr>
+          <td>Photo URL</td>
+          <td>{{user.photo}}</td>
+        </tr>
+        <tr>
+          <td>Name Prefix</td>
+          <td>{{user.namePrefix}}</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+
+  <aside class="asideTableWrapper">
+    <!-- Job information -->
+    <table class="jobTable">
+      <thead>
+        <tr>
+          <th colspan="2">Job</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Area</td>
+          <td>{{user.job.jobArea}}</td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>{{user.job.jobTitle}}</td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>{{user.job.jobType}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="addressTable">
+      <!-- Address information -->
+      <thead>
+        <tr>
+          <th colspan="2">Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>City</td>
+          <td>{{user.address.city}}</td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td>{{user.address.state}}</td>
+        </tr>
+        <tr>
+          <td>Street Address</td>
+          <td>{{user.address.streetAddress}}</td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td>{{user.address.country}}</td>
+        </tr>
+        <tr>
+          <td>Zip Code</td>
+          <td>{{user.address.zipCode}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+</section>

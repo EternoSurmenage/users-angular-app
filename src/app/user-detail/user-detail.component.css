@@ -1,0 +1,155 @@
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+button {
+  padding: 0.3em;
+  border: none;
+  border-radius: 8px;
+
+  max-width: 150px;
+  max-height: 75px;
+
+  background: #05386b;
+
+  font-weight: 100;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+button:hover {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #404040 !important;
+  font-weight: 700 !important;
+
+  background: cadetblue;
+
+  transition: all 0.3s ease 0s;
+}
+
+img {
+  margin-right: auto;
+  margin-left: 46%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Main wrapper for flexbox display */
+.wrapper {
+  display: flex;
+  flex-basis: 100%;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Wraps the General user info table */
+.userTableWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  max-width: 70%;
+  max-height: 100%;
+}
+
+/* Wraps Job and Address tables */
+.asideTableWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 30%;
+  min-height: 100%;
+}
+
+table {
+  border-collapse: separate;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-spacing: 0em;
+}
+
+/* Style for first column: */
+tbody tr > :nth-child(1) {
+  padding: 0.5em;
+  text-align: center;
+  color: white;
+  background-color: #389fa8;
+}
+
+/* Used to specify same width on first column of all tables */
+tbody tr > :nth-child(1) {
+  /* width: 25%; */
+}
+
+/* For sspacing the thead from tbody */
+tbody:before {
+  content: "-";
+  display: block;
+  line-height: 0.2em;
+  color: transparent;
+}
+
+/* For spacing Job and Address tables vertically */
+tbody:after {
+  content: "-";
+  display: block;
+  line-height: 0.7em;
+  color: transparent;
+}
+
+th {
+  background-color: #05386b;
+  color: white;
+}
+
+tr {
+  background-color: rgba(55, 150, 131, 0.3);
+  border-radius: 8px;
+  color: rgb(65, 59, 59);
+}
+
+td,
+th {
+  padding: 0.5em;
+}
+
+/* Border rounded for the right side of thead */
+.userTable thead tr:first-child th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.userTable thead tr:first-child th:first-child {
+  border-radius: 8px 0px 0px 8px;
+}
+
+thead tr:first-child th:first-child {
+  border-radius: 8px 8px 8px 8px;
+}
+
+/* Border rounded for the top-left corner */
+tbody tr:first-child td:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+/* Border rounded for the top-right corner */
+tbody tr:first-child td:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+/* Border rounded for the bottom-right corner */
+tbody tr:last-child td:last-child {
+  border-radius: 0 0 8px 0;
+}
+
+/* Border rounded for the bottom-left corner */
+tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 8px;
+}
