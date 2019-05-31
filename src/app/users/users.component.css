@@ -1,79 +1,79 @@
 h2{
-    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
-.userTable {
-  border-collapse: separate;
-  border-spacing: 0em 0.5em;
-  font-family: "Arial";
-  margin:auto;
+.user-table {
+border-collapse: separate;
+border-spacing: 0em 0.5em;
+font-family: "Arial";
+margin:auto;
 }
 
-.userTable th {
-  background-color: #389fa8;
-  color: white;
-  cursor: default;
+.user-table th {
+background-color: #389fa8;
+color: white;
+cursor: default;
 }
 
 /* This adds the | between each row as a separator */
-.userTable th:not(:last-child):not(:first-child):after {
-  content: "";
-  height: 60%;
-  width: 2px;
+.user-table th:not(:last-child):not(:first-child):after {
+content: "";
+height: 60%;
+width: 2px;
 
-  position: absolute;
-  right: 0;
-  top: 1;
-  bottom: 1;
+position: absolute;
+right: 0;
+top: 1;
+bottom: 1;
 
-  background-color: whitesmoke;
+background-color: whitesmoke;
 }
 
-.userTable tbody tr:hover{
-  background-color: silver;
+.user-table tbody tr:hover{
+background-color: silver;
 }
 
-.userTable tr {
-  background-color: rgba(55, 150, 131, 0.3);
-  border-radius: 8px;
-  color: rgb(65, 59, 59);
-  cursor: pointer;
+.user-table tr {
+background-color: rgba(55, 150, 131, 0.3);
+border-radius: 8px;
+color: rgb(65, 59, 59);
+cursor: pointer;
 }
 
 /* Style for first column: Id */
-.userTable tr > :nth-child(1) {
-  padding: 0.5em;
-  text-align: center;
-  color: white;
-  background-color: #05386b;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+.user-table tr > :nth-child(1) {
+padding: 0.5em;
+text-align: center;
+color: white;
+background-color: #05386b;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
 }
 /* Rounded borders for the last column */
-.userTable tr > :last-child {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+.user-table tr > :last-child {
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
 }
 
-.userTable td,
-.userTable th {
-  padding: 0.5em;
-  position: relative;
+.user-table td,
+.user-table th {
+padding: 0.5em;
+position: relative;
 
 }
 
 /* Adds | separator for the th */
-.userTable td:not(:last-child):not(:first-child):after,
+.user-table td:not(:last-child):not(:first-child):after,
 th:not(:last-child):not(:first-child):after {
-  content: "";
-  height: 60%;
-  width: 1px;
+content: "";
+height: 60%;
+width: 1px;
 
-  position: absolute;
-  right: 0;
-  top: 1;
-  bottom: 1;
+position: absolute;
+right: 0;
+top: 1;
+bottom: 1;
 
-  background-color: #b4aaaa;
+background-color: #b4aaaa;
 }
