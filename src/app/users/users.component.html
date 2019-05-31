@@ -1,5 +1,14 @@
 <h2>Users</h2>
-<table class="userTable">
+<ul>
+    <li>
+    <label>ID</label>
+    <label>User Name</label>
+    <label>Email</label>
+  </li>
+    <li *ngFor="let user of users" routerLink="/detail/{{user.id}}">{{user.id}} {{user.userName}} {{user.email}}</li>
+</ul>
+
+<table class="user-table">
   <thead>
     <tr>
       <th>ID</th>

@@ -1,11 +1,17 @@
-<header>
+<section>
   <img src={{user.photo}} alt="User photo">
   <h2>@{{user.userName | uppercase}} Details </h2>
-</header>
+</section>
 
 <section class="wrapper">
   <!-- General user information -->
   <aside class="userTableWrapper">
+
+<div class="generalInformationCard">
+<p><span class="attributeName">ID</span>{{user.id}}</p>
+<p></p>
+</div>
+
     <table class="userTable">
       <thead>
         <tr>
