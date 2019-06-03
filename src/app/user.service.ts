@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError, map, tap, retry } from "rxjs/operators";
 
-import { User } from "./classes/user";
+import { User } from "./models/user";
 import { environment } from "./../environments/environment";
 
 const httpOptions = {
@@ -27,7 +27,6 @@ export class UserService {
   // Get users
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.serverURL + "/users").pipe(
-      retry(1),
       catchError(this.handleError)
     );
   }
@@ -36,7 +35,6 @@ export class UserService {
   getUser(id: number): Observable<User> {
     const url = `${this.serverURL}/users/${id}`;
     return this.http.get<User>(url).pipe(
-      retry(1),
       catchError(this.handleError)
     );
   }

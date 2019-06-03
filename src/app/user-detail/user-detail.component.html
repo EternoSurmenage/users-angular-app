@@ -1,118 +1,55 @@
-<section>
+<section class="head">
+    <button (click)=goBack()><<</button>
   <img src={{user.photo}} alt="User photo">
   <h2>@{{user.userName | uppercase}} Details </h2>
 </section>
-
+ 
 <section class="wrapper">
   <!-- General user information -->
-  <aside class="userTableWrapper">
+  <aside class="user-card-wrapper">
 
-<div class="generalInformationCard">
-<p><span class="attributeName">ID</span>{{user.id}}</p>
-<p></p>
-</div>
+    <div class="card">
 
-    <table class="userTable">
-      <thead>
-        <tr>
-          <th> <button (click)="goBack()"><<Go back</button> </th> 
-                <th colspan="2"> General User Information</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>ID</td>
-          <td>{{user.id}}</td>
-        </tr>
-        <tr>
-          <td>Phone</td>
-          <td>{{user.phone}}</td>
-        </tr>
-        <tr>
-          <td>User Name</td>
-          <td>{{user.userName}}</td>
-        </tr>
-        <tr>
-          <td>First Name</td>
-          <td>{{user.firstName}}</td>
-        </tr>
-        <tr>
-          <td>Last Name</td>
-          <td>{{user.lastName}}</td>
-        </tr>
-        <tr>
-          <td>Birthday</td>
-          <td>{{user.dateOfBirth}}</td>
-        </tr>
-        <tr>
-          <td>Photo URL</td>
-          <td>{{user.photo}}</td>
-        </tr>
-        <tr>
-          <td>Name Prefix</td>
-          <td>{{user.namePrefix}}</td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td>{{user.email}}</td>
-        </tr>
-      </tbody>
-    </table>
+      <h3>General User Information</h3>
+
+      <ul>
+        <li><span>ID</span>{{user.id}}</li>
+        <li><span>Phone</span>{{user.phone}}</li>
+        <li><span>User Name</span>{{user.userName}}</li>
+        <li><span>First Name</span>{{user.firstName}}</li>
+        <li><span>Last Name</span>{{user.lastName}}</li>
+        <li><span>Bithday</span>{{user.dateOfBirth}}</li>
+        <li><span>Photo URL</span>{{user.photo}}</li>
+        <li><span>Name Prefix</span>{{user.namePrefix}}</li>
+        <li><span>Email</span>{{user.email}}</li>
+      </ul>
+    </div>
   </aside>
 
-  <aside class="asideTableWrapper">
+  <aside class="aside-cards-wrapper">
     <!-- Job information -->
-    <table class="jobTable">
-      <thead>
-        <tr>
-          <th colspan="2">Job</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Area</td>
-          <td>{{user.job.jobArea}}</td>
-        </tr>
-        <tr>
-          <td>Title</td>
-          <td>{{user.job.jobTitle}}</td>
-        </tr>
-        <tr>
-          <td>Type</td>
-          <td>{{user.job.jobType}}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="card">
 
-    <table class="addressTable">
-      <!-- Address information -->
-      <thead>
-        <tr>
-          <th colspan="2">Address</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>City</td>
-          <td>{{user.address.city}}</td>
-        </tr>
-        <tr>
-          <td>State</td>
-          <td>{{user.address.state}}</td>
-        </tr>
-        <tr>
-          <td>Street Address</td>
-          <td>{{user.address.streetAddress}}</td>
-        </tr>
-        <tr>
-          <td>Country</td>
-          <td>{{user.address.country}}</td>
-        </tr>
-        <tr>
-          <td>Zip Code</td>
-          <td>{{user.address.zipCode}}</td>
-        </tr>
-      </tbody>
-    </table>
+      <h3>Job</h3>
+
+      <ul>
+        <li><span>Area</span>{{user.job.jobArea}}</li>
+        <li><span>Title</span>{{user.job.jobTitle}}</li>
+        <li><span>Type</span>{{user.job.jobType}}</li>
+      </ul>
+    </div>
+    <!-- Address information -->
+    <div class="card">
+
+      <h3>Address</h3>
+
+      <ul>
+        <li><span>City</span>{{user.address.city}}</li>
+        <li><span>State</span>{{user.address.state}}</li>
+        <li><span>Street Address</span>{{user.address.streetAddress}}</li>
+        <li><span>Country</span>{{user.address.country}}</li>
+        <li><span>Zip Code</span>{{user.address.zipCode}}</li>
+      </ul>
+    </div>
   </aside>
 </section>

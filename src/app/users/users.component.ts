@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { UserService } from "../user.service";
-import { User } from "../classes/user";
+import { User } from "../models/user";
 
 @Component({
   selector: "fes-users",

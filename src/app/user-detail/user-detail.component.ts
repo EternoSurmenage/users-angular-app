@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import { Location } from "@angular/common";
 
 import { UserService } from "../user.service";
-import { User } from "../classes/user";
+import { User } from "../models/user";
 
 @Component({
   selector: "fes-user-detail",
