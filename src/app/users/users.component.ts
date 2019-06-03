@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { UserService } from "../user.service";
+import { ErrorNotificationService} from "../error-notification.service";
 import { User } from "../models/user";
 
 @Component({
