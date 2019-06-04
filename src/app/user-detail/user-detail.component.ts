@@ -33,10 +33,12 @@ export class UserDetailComponent implements OnInit {
 
   getUser(): void {
     const id = +this.route.snapshot.paramMap.get("id");
-    this.userService.getUser(id).subscribe(user => (this.user = user));
+    this.userService.getUser(id).subscribe(user => 
+      (this.user = user));
   }
 
   goBack(): void {
-    this.location.back();
+    // this.location.back();
+    this.router.navigate(['/users']);
   }
 }
