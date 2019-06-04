@@ -17,7 +17,7 @@ const httpOptions = {
   providedIn: "root"
 })
 export class UserService {
-  env = environment;
+  environment = environment;
 
   constructor(
     private http: HttpClient,
@@ -31,14 +31,14 @@ export class UserService {
 
   /** Log a message with the MessageService */
   private log(message: string) {
-    this.messageService.clear();
     this.messageService.add(`${message}`); //
   }
 
   // Get users
   getUsers(): Observable<User[]> {
+    this.messageService.clear();
     return this.http
-      .get<User[]>(this.env.serverURL + "/users")
+      .get<User[]>(this.environment.serverURL + "/users")
       .pipe(
         catchError(
           this.handleError<User[]>(
@@ -50,7 +50,8 @@ export class UserService {
 
   // Get single user
   getUser(id: number): Observable<User> {
-    const url = `${this.env.serverURL}/users/${id}`;
+    this.messageService.clear();
+    const url = `${this.environment.serverURL}/users/${id}`;
     return this.http
       .get<User>(url)
       .pipe(
